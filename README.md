@@ -1,9 +1,9 @@
 # veshop
 
-> 参考nemo-tree大佬的vue2-shop项目，仿写的移动web商城,主要目的用来学习vue
+> 参考nemo-tree大佬的vue2-shop项目，仿写的移动web商城,主要目的用来学习vue </br>
 > [nemo-tree大佬的vue2-shop](https://github.com/nemo-tree/vue2-shop)
 
-技术栈:
+### 技术栈:
 
 ##### vue2.x
 
