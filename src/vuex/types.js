@@ -26,3 +26,26 @@ export  const CHANGE_COUNT='CHANGE_COUNT';
 
 export  const  RESET_CARLIST='RESET_CARLIST';
 
+//提交订单后重置购物车中商品数量
+
+export const  RESET_COUNT='RESET_COUNT ';
+
+//购物车中打勾的商品
+
+export  const  SET_SELECTEDLIST='SET_SELECTEDLIST';
+
+//购物车中没打勾的商品
+
+export  const SET_UNSELECTEDLIST='SET_UNSELECTEDLIST';
+
+//全局loading状态
+
+export const SET_LOADING='SET_LOADING';
+
+//改变token（权限）
+
+export  const  CHANGE_TOKEN='CHANGE_TOKEN';
+
+//分类页的aside index
+
+export const  CHANGE_TABINDEX='CHANGE_TABINDEX';
