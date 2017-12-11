@@ -1,25 +1,25 @@
 # veshop
 
 > 参考nemo-tree大佬的vue2-shop项目，仿写的移动web商城,主要目的用来学习vue
-[nemo-tree大佬的vue2-shop](https://github.com/nemo-tree/vue2-shop)
+> [nemo-tree大佬的vue2-shop](https://github.com/nemo-tree/vue2-shop)
 
 技术栈:
 
-vue2.x
+##### vue2.x
 
-vuex
+##### vuex
 
-vue-router
+##### vue-router
 
-axios
+##### axios
 
-mint-ui
+##### mint-ui
 
-mockjs
+##### mockjs
 
-es6
+##### es6
 
-less
+##### less
 
 ## Build Setup
 
