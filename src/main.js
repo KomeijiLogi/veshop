@@ -7,10 +7,12 @@ import store from '@/vuex/store.js'   //vuex
 import mint from 'mint-ui'           //mint-ui
 import 'mint-ui/lib/style.css'
 
+
 import api from '@/http/api.js'      //http请求
 
 
 Vue.use(mint)
+
 Vue.config.productionTip = false
 Vue.prototype.$api=api
 

@@ -23,13 +23,16 @@
             </li>
          </ul>
          <!--支付成功后的提示-->
-        <div class="pay-confirm" v-else> 
+        <div class="pay-confirm" v-else>
            支付成功!
           <!--当页面数据清空<br/>-->
           <!--购物车列表重新设置-->
         </div>
       </div>
-
+      <h3 class="pay-allpay">总需要支付:<i>$</i><span>{{allpay}}</span></h3>
+      <footer class="pay-footer" ontouchstart="" @click="payConfirm">
+          <span>立即支付</span>
+      </footer>
    </div>
 </template>
 
@@ -43,10 +46,175 @@
           return{
              confirm:''
           }
+        },
+        mounted(){
+          //防止页面刷新后数据丢失
+           if(this.$store.state.detail.selectedList==''){
+              this.$store.commit('SET_SELECTEDLIST');
+           }
+        },
+        computed:{
+            //所有商品列表
+            carList(){
+              return this.$store.state.detail.selectedList;
+            },
+
+            //商品价格的总和
+            allpay(){
+              let allpay=0;
+              for(let i=0;i<this.$store.state.detail.selectedList.length;i++){
+                 allpay+=this.$store.state.detail.selectedList[i].price;
+              }
+              return allpay;
+            }
+        },
+        methods:{
+          payConfirm:function () {
+            if(this.carList){
+              //还没有提交订单，数据没清空
+               MessageBox
+                 .confirm(`确定支付${this.allpay}元`)
+                 .then(action=>{
+                   //点击成功执行这里的函数
+                   this.confirm=false;
+                   this.$store.commit('SET_LOADING',true);
+                   this.$store.dispatch('resetCarList');   //重置购物车(用unSelectedList代替carList)
+                   this.$store.dispatch('resetCount');     //重置购物车数量
+                   setTimeout(()=>{
+                      this.$store.commit('SET_LOADING',false);   //关闭loading
+                      this.confirm=true;       //支付成功后切换视图
+                   },300);
+                 },function (err) {
+                   //点击取消执行这里的函数
+                 });
+            }else {
+               //提交订单，数据清空
+               alert('请勿重复提交订单');
+            }
+          }
         }
     }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
+  @import '../../../assets/fz.less';
+  .pay {
+    width: 100%;
+    background-color: #F7F7F7;
+
+    .pay-address {
+      background-color: #fff;
+      border-bottom: 1*10vw/75 solid #DEDEDE;
+      padding: 30*10vw/75;
+
+      > div {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: space-between;
+
+        p {
+          color: #868686;
+          .fz(font-size,32px);
+        }
+      }
+
+      > p {
+        .fz(font-size,28px);
+        color: #868686;
+        padding-top: 30*10vw/75;
+        letter-spacing: 3*10vw/75;
+        line-height: 45*10vw/75;
+      }
+    }
+    .pay-product {
+      background-color: #fff;
+      height: 60vw;
+      overflow: auto;
+
+      li {
+        a {
+          display: -webkit-flex;
+          display: -ms-flex;
+          display: flex;
+          box-sizing: border-box;
+          padding: 20*10vw/75 30*10vw/75;
+          color: #4D4D4D;
+          .fz(font-size,30px);
+          border-bottom: 1*10vw/75 solid #DEDEDE;
+
+          > img {
+            display: block;
+            width: 2.5*10vw;
+            height: 2.5*10vw;
+          }
+
+          > div {
+            box-sizing: border-box;
+            padding-left: 50*10vw/75;
+            width: 70%;
+            h2 {
+              padding-top: 0.09*10vw;
+              overflow: hidden;
+              word-break: keep-all;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+
+            p {
+              text-align: right;
+              .fz(font-size,24px);
+              padding-top: 1.4*10vw;
+            }
+          }
+        }
+      }
+    }
+
+    .pay-allpay {
+      text-align: right;
+      margin-top: 6vw;
+      padding: 4vw 5vw;
+      .fz(font-size,32px);
+      color: #999999;
+      background-color: #fff;
+      i,
+      span {
+        color: @cl;
+      }
+    }
+
+    .pay-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding-bottom: 4vw;
+      span {
+        display: block;
+        width: 85%;
+        background-color: #fd729c;
+        border-radius: 1.3vw;
+        color: #fff;
+        font-size: 17px;
+        padding: 4vw;
+        margin: 0 auto;
+        text-align: center;
+        &:active {
+          background-color: @cl;
+        }
+      }
+
+    }
+
+    .pay-confirm {
+      padding: 20px 0;
+      background-color: @cl;
+      text-align: center;
+      color: #fff;
+      line-height: 30px;
+      .fz(font-size,40);
+    }
+  }
 
 </style>
