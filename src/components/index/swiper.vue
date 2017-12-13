@@ -1,14 +1,21 @@
 <template lang="html">
    <mt-swipe :auto="4000" v-if="swiperData">
-
+       <mt-swipe-item v-for="k in swiperData" :key="k.id">
+           <router-link :to="{name:'详情页'}">
+               <img :src="k.imgPath"/>
+           </router-link>
+       </mt-swipe-item>
    </mt-swipe>
 </template>
 
 <script>
     import MtSwipe from "mint-ui/packages/swipe/src/swipe";
+    import MtSwipeItem from "mint-ui/packages/swipe/src/swipe-item";
 
     export default {
-      components: {MtSwipe},
+      components: {
+        MtSwipeItem,
+        MtSwipe},
       name: "swiper",
         props:['swiperData']
     }
