@@ -26,10 +26,10 @@ export default new Router({
       name:'分类页',
       component:Category,
       redirect:'/category/all',
-      children:{
+      children:[{
          path:'/category/:tab',
          component:CategoryMain
-      }
+      }]
     },
     {
       path:'/car',

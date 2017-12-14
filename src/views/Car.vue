@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import Header from '@/common/_header.vue'
+    import Header from '@/common/header.vue'
     import Something from '@/components/car/something.vue'
     import Nothing from  '@/components/car/nothing.vue'
     import Footer from '@/components/car/footer.vue'

@@ -46,7 +46,7 @@ api.interceptors.response.use(function (response) {
 
      if(error.response){
         //根据返回的状态码进行判断处理
-         if(error.response==401){
+         if(error.response.status==401){
             // 401 unauthorized
             //如果返回401，表示没有权限，跳到登录页重新登录
             store.commit('CHANGE_TOKEN',0);
@@ -59,8 +59,6 @@ api.interceptors.response.use(function (response) {
             })
          }
      }
-     return Promise.reject(error);
+  return Promise.reject(error);
 });
-
-
-export  default  api;
+export  default  api

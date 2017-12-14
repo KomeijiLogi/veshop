@@ -29,7 +29,7 @@
     import Util from '../../util/common'
     export default {
         name: "something",
-        component:{
+        components:{
           'v-gologin':Gologin
         },
         computed:{

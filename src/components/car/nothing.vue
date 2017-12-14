@@ -15,7 +15,7 @@
     import Gologin from  '@/components/car/gologin.vue'
     export default {
         name: "nothing",
-        component:{
+        components:{
           'v-gologin':Gologin
         }
     }

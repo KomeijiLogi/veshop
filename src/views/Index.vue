@@ -21,12 +21,12 @@
     import Section2 from '@/components/index/section2.vue'
     import Section3 from '@/components/index/section3.vue'
     import Section4 from '@/components/index/section4.vue'
-    import Baseline from '@/common/_baseline.vue'
-    import Footer from '@/common/_footer.vue'
+    import Baseline from '@/common/baseline.vue'
+    import Footer from '@/common/footer.vue'
     import Index from '@/http/mock.js'
     export default {
         name: "index",
-        component:{
+        components:{
           'v-header':Header,
           'v-swiper':Swiper,
           'v-service':Service,

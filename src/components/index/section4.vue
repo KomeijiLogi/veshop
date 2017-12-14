@@ -1,9 +1,23 @@
 <template lang="html">
-   <section4>
-
+   <section4 class="section4" v-if="section4">
+      <h2 class="section4-title">
+         section4
+        <i class="icon-right"></i>
+      </h2>
+      <ul class="section4-list">
+         <li v-for="k in section4.list">
+           <router-link :to="{name:'分类页'}" :key="k.id">
+              <img v-lazy="k.imgPath" />
+              <p>{{k.intro}}</p>
+           </router-link>
+           <h3>{{k.title}}</h3>
+           <h3>${{k.price}}</h3>
+         </li>
+      </ul>
+      <router-link :to="{name:'分类页'}" class="section4-bannner">
+         <img v-lazy="section4.banner"/>
+      </router-link>
    </section4>
-
-
 </template>
 
 <script>
