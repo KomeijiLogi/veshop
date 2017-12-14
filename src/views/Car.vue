@@ -38,6 +38,9 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="less" scoped>
+  .car {
+    width: 100%;
+    padding-bottom: 14vw;
+  }
 </style>
