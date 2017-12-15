@@ -28,7 +28,7 @@ export  const  RESET_CARLIST='RESET_CARLIST';
 
 //提交订单后重置购物车中商品数量
 
-export const  RESET_COUNT='RESET_COUNT ';
+export const  RESET_COUNT='RESET_COUNT';
 
 //购物车中打勾的商品
 

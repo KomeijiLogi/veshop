@@ -14,7 +14,7 @@
 </template>
 
 <script>
-    import { MesageBox } from 'mint-ui'
+    import { MessageBox } from 'mint-ui'
     import { Toast } from 'mint-ui'
     export default {
         name: "footer",
@@ -50,7 +50,7 @@
                 choseBool:false
               }];
 
-              MesageBox
+              MessageBox
                 .confirm(
                    `商品名称:${product[0].title}</br>`+
                   `价格:${product[0].price}</br>`+

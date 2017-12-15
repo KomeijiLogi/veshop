@@ -101,7 +101,7 @@ const  actions={
          method:'post',
          url:'/detail'
       }).then((response)=>{
-         commit('SET_DATA',response.data)
+         commit('SET_DATAS',response.data)
       });
    },
    //购物车数量增减,true是加，false是减
