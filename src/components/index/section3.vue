@@ -85,7 +85,7 @@
                     if(end-now<=0){
                        minute='00';
                        second='00';
-                       ms:'00';
+                       ms='00';
                        dom.num2=ms;
                        return;
                     }

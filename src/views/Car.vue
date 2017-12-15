@@ -18,7 +18,7 @@
     import Footer from '@/components/car/footer.vue'
     export default {
         name: "car",
-        component:{
+        components:{
            'v-header':Header,
           'v-something':Something,
           'v-nothing':Nothing,
