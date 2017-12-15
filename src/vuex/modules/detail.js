@@ -100,7 +100,7 @@ const  actions={
       vm.$api({
          method:'post',
          url:'/detail'
-      }).then(function () {
+      }).then((response)=>{
          commit('SET_DATA',response.data)
       });
    },

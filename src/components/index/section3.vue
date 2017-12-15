@@ -94,7 +94,7 @@
                     dom.num3=ms;
                   },40)
                });
-               this.section3=response.date.section3;
+               this.section3=response.data.section3;
                for(let i of this.dom.keys()){
                   setTime(response.data.section3.list[i].end,this.dom[i]);
                   this.section3.list[i].dom=this.dom[i];
