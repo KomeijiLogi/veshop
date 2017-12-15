@@ -1,10 +1,41 @@
 <template lang="html">
-
+   <div class="wrap">
+        <v-header class="header">
+           <h1 slot="title">商品分类</h1>
+        </v-header>
+        <section class="view">
+           <v-aside :datas="allData"></v-aside>
+           <router-view :datas="allData"></router-view>
+        </section>
+   </div>
 </template>
 
 <script>
+    import  Header from '@/common/header.vue'
+    import Aside from '@/components/category/aside.vue'
+    import category from '@/http/mock.js'
+
     export default {
-        name: "category"
+        name: "category",
+        components:{
+           'v-header':Header,
+           'v-aside':Aside
+        },
+        data(){
+           return{
+              allData:''
+           }
+        },
+        created(){
+           this.$api({
+              url:'/category',
+              method:'post'
+           }).then((res)=>{
+              this.allData=res.data;
+           }).catch((error)=>{
+              console.log(error);
+           });
+        }
     }
 </script>
 

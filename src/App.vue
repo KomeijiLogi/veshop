@@ -2,7 +2,7 @@
   <div id="app">
     <!--<img src="./assets/logo.png">-->
     <router-view/>
-    <!--<v-loading v-show="fetchLoading"></v-loading>-->
+    <v-loading v-show="fetchLoading"></v-loading>
   </div>
 </template>
 
@@ -11,12 +11,12 @@ import Loading from '@/common/loading'
 export default {
   name: 'app',
   components:{
-    // 'v-loading':Loading
+    'v-loading':Loading
   },
   computed:{
-    // fetchLoading(){
-    //     return this.$store.state.detail.fetchLoading;
-    //  }
+    fetchLoading(){
+        return this.$store.state.detail.fetchLoading;
+     }
   }
 }
 </script>

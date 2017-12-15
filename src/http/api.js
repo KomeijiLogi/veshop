@@ -3,11 +3,18 @@ import store from  '@/vuex/store.js'
 import router from '../router'
 
 
-const api=axios.create();
-api.defaults.baseURL='http://api.com';
-api.defaults.timeout=5000;
-api.defaults.headers.post['Content-type']='application/x-www-form-urlencoded';
-api.defaults.headers.post['X-Requested-With']='XMLHttpRequest';
+const api=axios.create({
+  baseURL:'http://api.com',
+  timeout:5000,
+  headers:{
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'X-Requested-With':'XMLHttpRequest'
+  }
+});
+// api.defaults.baseURL='http://api.com';
+// api.defaults.timeout=5000;
+// api.defaults.headers.post['Content-type']='application/x-www-form-urlencoded';
+// api.defaults.headers.post['X-Requested-With']='XMLHttpRequest'
 
 
 //请求拦截
@@ -32,11 +39,11 @@ api.interceptors.request.use(function (config) {
 api.interceptors.response.use(function (response) {
     //对响应数据做操作
     // 加到计时器主要是为了 展示Loading效果 项目中应去除
-    /*
+
       setTimeout(()=>{
         store.commit('SET_LOADING',false);
       },300)
-     */
+
      return response;
 
 
