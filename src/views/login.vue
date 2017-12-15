@@ -8,7 +8,7 @@
            label="账号"
            placeholder="请输入账号"
            type="text"
-           v-model="acount"
+           v-model="account"
            :readonly="!toggle"
            :disableClear="!toggle"
          >
@@ -61,7 +61,7 @@
         methods:{
           //登录
            login(){
-              if(this.account!=''&&this.password!=''){
+              if(this.account!==''&&this.password!==''){
                  Toast('登录成功');
                  this.toggle=false;
                  this.$store.commit('CHANGE_TOKEN',1);
