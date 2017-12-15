@@ -20,7 +20,7 @@
            </ul>
         </div>
         <router-link class="section2-banner" :to="{name:'详情页'}">
-            <img v-lazy="section2.banner">
+            <img v-lazy="section2.banner"/>
         </router-link>
     </section>
 </template>
