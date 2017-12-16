@@ -68,7 +68,7 @@ const mutations={
 
     //重置购物车数量
     [types.RESET_COUNT](state,res){
-       state.count=Util.getLocal('carList').length;
+       state.count=Util.getLocal('carList').length
     },
 
     //loading开关

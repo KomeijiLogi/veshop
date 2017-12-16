@@ -17,6 +17,7 @@ export default {
                return window.localStorage.setItem(key,JSON.stringify(oldData.concat(res)));
            }
         }
+        return window.localStorage.setItem(key,JSON.stringify(res));
     }
 
 }
