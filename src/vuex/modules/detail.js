@@ -144,9 +144,11 @@ const  actions={
    //分别保存打勾和未打钩的商品
    setSelectedList({commit,getters}){
       Util.setLocal(getters.selectedList,'selectedList');
-      commit(types.SET_SELECTEDLIST);
+      //commit(types.SET_SELECTEDLIST);
+      commit('SET_SELECTEDLIST');
       Util.setLocal(getters.unSelectedList,'unSelectedList');
-      commit(types.SET_UNSELECTEDLIST);
+      //commit(types.SET_UNSELECTEDLIST);
+      commit('SET_UNSELECTEDLIST');
    }
 
 
@@ -156,7 +158,7 @@ const  actions={
 const getters={
    selectedList(state){
       //choseBool为真的商品，即购物车里打钩的商品
-     if(state.carList!=''){
+     if(state.carList!==''){
         let arr=state.carList.filter((ele)=>{
            return ele.choseBool == true  ;
         });
@@ -164,7 +166,7 @@ const getters={
      }
    },
    unSelectedList(state){
-     if(state.carList!=''){
+     if(state.carList!==''){
         let arr=state.carList.filter((ele)=>{
            return ele.choseBool==false;
         });

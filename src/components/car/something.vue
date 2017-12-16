@@ -40,7 +40,7 @@
         mounted(){
             //初始化先获取购物车商品列表
             if(this.$store.state.detail.selectedList==''){
-               this.$store.commit('RESET_CATLIST');
+               this.$store.commit('RESET_CARLIST');
 
 
             }
