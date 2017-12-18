@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="nothing">
-     <v-gologin></v-gologin>
+     <v-gologin v-if="!login"></v-gologin>
      <div class="nothing-img">
         <img src="../../assets/car/images/cart.svg" alt=""/>
      </div>
@@ -17,6 +17,11 @@
         name: "nothing",
         components:{
           'v-gologin':Gologin
+        },
+        computed:{
+           login(){
+              return this.$store.state.login.token;
+           }
         }
     }
 </script>

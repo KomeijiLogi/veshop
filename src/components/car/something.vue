@@ -1,6 +1,6 @@
 <template lang="html">
    <div class="wrap">
-      <v-gologin></v-gologin>
+      <v-gologin v-if="!login"></v-gologin>
       <ul class="something" v-if="carList">
         <li v-for="(k,i) in carList">
            <div class="something-left" @click="toggle">
@@ -35,6 +35,9 @@
         computed:{
            carList(){
               return this.$store.state.detail.carList;
+           },
+           login(){
+              return this.$store.state.login.token;
            }
         },
         mounted(){
