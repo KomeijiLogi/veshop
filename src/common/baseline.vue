@@ -1,5 +1,5 @@
 <template>
-    <div>--------------</div>
+    <div>-----------底部提示语------------</div>
 </template>
 
 <script>

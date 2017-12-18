@@ -84,7 +84,7 @@
                    setTimeout(()=>{
                       this.$store.commit('SET_LOADING',false);   //关闭loading
                       this.confirm=true;       //支付成功后切换视图
-                      
+
                    },300);
                  },function (err) {
                    //点击取消执行这里的函数
