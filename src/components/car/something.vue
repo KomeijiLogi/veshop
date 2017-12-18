@@ -34,23 +34,35 @@
         },
         computed:{
            carList(){
-              return this.$store.state.detail.selectedList;
+              return this.$store.state.detail.carList;
            }
         },
         mounted(){
-            //初始化先获取购物车商品列表
-            if(this.$store.state.detail.selectedList==''){
+            //初始化先获取购物车商品列表 否组页面刷新出现bug
+            if(this.$store.state.detail.carList==''){
                this.$store.commit('RESET_CARLIST');
-
-
             }
         },
         methods:{
           cut(i){
+              //点击垃圾桶，删除当前商品，这里用splice和filter都会bug，只能重置数组
+              let newCarList=[];
 
+              for(let k=0;k<this.carList.length;k++){
+                  if(k!==i){
+                     newCarList.push(this.carList[k]);
+                  }
+              }
+
+              //点击垃圾桶 把商品数量count-1
+              this.$store.dispatch('setLocalCount',false);
+              this.$store.dispatch('cutCarList',newCarList);
           },
           toggle(){
-
+              setTimeout(()=>{
+                //每点击一下都会改变choseBool的布尔值，所以要重置数组
+                this.$store.dispatch('cutCarList',this.carList);
+              },0);
           }
         }
     }
