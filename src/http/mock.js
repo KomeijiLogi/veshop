@@ -64,7 +64,7 @@ var index = Mock.mock('http://api.com/index', {
 
 var detail = Mock.mock('http://api.com/detail', {
   "view|1": [{
-    'title|1': ['JavaScript从入门到单身狗','Android从入门到改行','Java从入门到放弃治疗 ','Sql从入门到删库','PHP从入门到出轨 ','C#从入门到放弃','Swift从入门到入土','C++从入门到懵逼','Linux从入门到跑路','Python从入门到吃土',
+    'title|1': ['JavaScript从入门到单身狗','Android从入门到改行','Java从入门到放弃治疗 ','Sql从入门到删库','PHP从入门到出轨 ','.net从入门到放弃','Swift从入门到入土','C++从入门到懵逼','Linux从入门到跑路','Python从入门到吃土',
          'Ruby从入门到怀疑人生'
     ],
     'intro':  Random.cparagraph(2),
