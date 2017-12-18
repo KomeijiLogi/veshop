@@ -13,8 +13,10 @@
 
 <script>
     import {Lazyload} from 'mint-ui'
+    import MtButton from "mint-ui/packages/button/src/button";
     export default {
-        name: "main",
+      components: {MtButton},
+      name: "main",
         props:['datas'],
         computed:{
            //获取当前aside选择栏是第几个
