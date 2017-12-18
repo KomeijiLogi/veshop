@@ -5,7 +5,7 @@
      </v-header>
      <div>
        <mt-search v-model="search"  cancel-text="取消" placeholder="请输入要搜索的内容">
-         
+
        </mt-search>
      </div>
    </div>

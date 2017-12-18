@@ -23,9 +23,9 @@ var index = Mock.mock('http://api.com/index', {
   },
   'section2|10':{
     'list|10':[{
-      'title':'@first',
+      'title':'@cname',
       'price|99-1000':100,
-      'intro': Random.paragraph(),
+      'intro': Random.cparagraph(),
       'imgPath':Random.image('200x200', '#dec4e0', '#333', 'png', ''),
       'id':'@id'
     }],

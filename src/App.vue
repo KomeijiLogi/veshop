@@ -8,6 +8,7 @@
 
 <script>
 import Loading from '@/common/loading'
+
 export default {
   name: 'app',
   components:{

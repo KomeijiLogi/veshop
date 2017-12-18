@@ -129,7 +129,7 @@
     .header {
       width: 100%;
       height: 16vw;
-      /*background: url(../../static/carbg.png) center 0 #f37d0f;*/
+      background: url(../../static/carbg.png) center 0 #f37d0f;
       background-size: auto 100%;
       padding: 3.2vw 0;
       display: -webkit-box;
