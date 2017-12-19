@@ -32,15 +32,7 @@
              <router-link class="my-vip-top ho" :to="{name:''}">
                 <div class="my-vip-top-div">
                    <span class="icon2-vip">
-                       <span class="path1"></span>
-                       <span class="path2"></span>
-                       <span class="path3"></span>
-                       <span class="path4"></span>
-                       <span class="path5"></span>
-                       <span class="path6"></span>
-                       <span class="path7"></span>
-                       <span class="path8"></span>
-                       <span class="path9"></span>
+                       <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span>
                    </span>
                 </div>
                 <p>
@@ -61,9 +53,7 @@
              <router-link class="my-service-top" :to="{name:''}">
                 <div>
                    <span class="my-service">
-                       <span class="path1"></span>
-                       <span class="path2"></span>
-                       <span class="path3"></span>
+                       <span class="path1"></span><span class="path2"></span><span class="path3"></span>
                    </span>
                 </div>
                 <p>
