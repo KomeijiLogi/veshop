@@ -7,6 +7,7 @@
            <v-aside :datas="allData"></v-aside>
            <router-view :datas="allData"></router-view>
         </section>
+        <v-footer></v-footer>
    </div>
 </template>
 
@@ -14,12 +15,13 @@
     import  Header from '@/common/header.vue'
     import Aside from '@/components/category/aside.vue'
     import category from '@/http/mock.js'
-
+    import Footer from '@/common/footer.vue'
     export default {
         name: "category",
         components:{
            'v-header':Header,
-           'v-aside':Aside
+           'v-aside':Aside,
+           'v-footer':Footer
         },
         data(){
            return{
