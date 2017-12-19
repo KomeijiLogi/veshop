@@ -45,9 +45,11 @@
            //点击调整到支付页
           goPay(){
              //如果选择了商品才能跳转
+
              if(this.$store.getters.selectedList.length){
                //保存并缓存选中的商品，在支付页里会用到
                this.$store.dispatch('setSelectedList');
+
                this.$router.push({name:'支付页'});
              }else {
                alert('未选择任何商品');

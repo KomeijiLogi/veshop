@@ -30,8 +30,11 @@
         </div>
       </div>
       <h3 class="pay-allpay">总需要支付:<i>$</i><span>{{allpay}}</span></h3>
-      <footer class="pay-footer" ontouchstart="" @click="payConfirm">
+      <footer class="pay-footer"  @click="payConfirm" v-if="!confirm">
           <span>立即支付</span>
+      </footer>
+      <footer class="pay-footer"  @click="toggle" v-else>
+          <span>继续购物</span>
       </footer>
    </div>
 </template>
@@ -71,6 +74,7 @@
         },
         methods:{
           payConfirm:function () {
+
             if(this.carList){
               //还没有提交订单，数据没清空
                MessageBox
@@ -93,6 +97,9 @@
                //提交订单，数据清空
                alert('请勿重复提交订单');
             }
+          },
+          toggle(){
+             this.$router.push({name:'分类页'});
           }
         }
     }

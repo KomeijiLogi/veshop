@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'car';
-  src:  url('http://localhost:1562/src/assets/user/icon/fonts/icomoon.eot?sizl2u');
-  src:  url('http://localhost:1562/src/assets/user/icon/fonts/icomoon.eot?sizl2u#iefix') format('embedded-opentype'),
-    url('http://localhost:1562/src/assets/user/icon/fonts/icomoon.ttf?sizl2u') format('truetype'),
-    url('http://localhost:1562/src/assets/user/icon/fonts/icomoon.woff?sizl2u') format('woff'),
-    url('http://localhost:1562/src/assets/user/icon/fonts/icomoon.svg?sizl2u#icomoon') format('svg');
+  src:  url('/src/assets/user/icon/fonts/icomoon.eot?sizl2u');
+  src:  url('/src/assets/user/icon/fonts/icomoon.eot?sizl2u#iefix') format('embedded-opentype'),
+    url('/src/assets/user/icon/fonts/icomoon.ttf?sizl2u') format('truetype'),
+    url('/src/assets/user/icon/fonts/icomoon.woff?sizl2u') format('woff'),
+    url('/src/assets/user/icon/fonts/icomoon.svg?sizl2u#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
