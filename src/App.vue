@@ -26,7 +26,8 @@ export default {
   html,body,#app{
     width: 100%;
     height: 100%;
-    -webkit-tap-highlight-color:rgba(0,0,0,0)
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    font-family: sans-serif;
   }
 
   body,

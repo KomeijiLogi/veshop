@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'index';
-  src:  url('/fonts/icomoon.eot?l7od8k');   /* IE9 Compat Modes */
+  src:  url('/fonts/icomoon.eot?l7od8k');                     /* IE9 Compat Modes */
   src:  url('/fonts/icomoon.eot?l7od8k#iefix') format('embedded-opentype'),  /* IE6-IE8 */
-    url('/fonts/icomoon.ttf?l7od8k') format('truetype'), /* Safari, Android, iOS */
-    url('/fonts/icomoon.woff?l7od8k') format('woff'), /* Modern Browsers */
-    url('/fonts/icomoon.svg?l7od8k#icomoon') format('svg');  /* Legacy iOS */
+  url('/fonts/icomoon.ttf?l7od8k') format('truetype'),      /* Safari, Android, iOS */
+  url('/fonts/icomoon.woff?l7od8k') format('woff'),          /* Modern Browsers */
+  url('/fonts/icomoon.svg?l7od8k#icomoon') format('svg');   /* Legacy iOS */
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'index' !important;
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;

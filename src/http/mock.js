@@ -54,7 +54,7 @@ var index = Mock.mock('http://api.com/index', {
       'title':'@first',
       'imgPath':Random.image('400x400', '#e2f630', '#333', 'png',''),
       'price|99-1000':100,
-      'intro': Random.paragraph(),
+      'intro': Random.cparagraph(),
       'id':'@id'
     }],
     'banner':Random.image('400x100', '#ffcc33','#FFF', 'png', 's4-banner')
@@ -88,9 +88,9 @@ var detail = Mock.mock('http://api.com/detail', {
 
 var category = Mock.mock('http://api.com/category', {
   'aside|14':[{
-    'title':'@cword(3)',
+    'title':'@cword(2)',
     'list|60':[{
-      'title':'@word(5)',
+      'title':'@cword(3)',
       'imgPath':Random.image('2000x2000','#5169b4','#FFF','png',''),
 
     }]
