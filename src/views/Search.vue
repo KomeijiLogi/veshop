@@ -4,7 +4,13 @@
        <h1 slot="title">搜索页</h1>
      </v-header>
      <div>
-       <mt-search v-model="search"  cancel-text="取消" placeholder="请输入要搜索的内容">
+       <mt-search v-model="search"  cancel-text="取消" placeholder="请输入要搜索的内容"
+       >
+          <mt-cell v-for="k in result" :title="k.title">
+             <router-link :to="{name:'详情页'}">
+                <span>{{k.title}}</span>
+             </router-link>
+          </mt-cell>
 
        </mt-search>
      </div>
@@ -15,6 +21,9 @@
     import  Header from  '@/common/header.vue'
     import MtSearch from "mint-ui/packages/search/src/search";
     import MtCell from "mint-ui/packages/cell/src/cell";
+    import category from '@/http/mock.js'
+    import { Search } from 'mint-ui';
+
     export default {
         name: "search",
         components:{
@@ -24,11 +33,22 @@
         },
         data(){
            return {
-              search:''
+              search:'',
+              result:''
            }
         },
         computed:{
 
+        },
+        created(){
+          this.$api({
+            url:'/category',
+            method:'post'
+          }).then((res)=>{
+            this.result=res.data;
+          }).catch((error)=>{
+            console.log(error);
+          });
         }
 
 
