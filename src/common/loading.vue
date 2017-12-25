@@ -4,7 +4,7 @@
         <div class="double-bounce1"></div>
         <div class="double-bounce2"></div>
       </div>
-      <p>正在加载.....</p>
+      <p>正在加载......</p>
    </div>
 </template>
 
