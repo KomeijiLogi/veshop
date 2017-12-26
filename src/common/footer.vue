@@ -76,7 +76,9 @@
    @import '../assets/fz.less';
    @import '../assets/index/style.less';
 
-
+   @font-face {
+      .font-style;
+   }
    .mint-tab-item-label:hover {
      color:#333;
    }
