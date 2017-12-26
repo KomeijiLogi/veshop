@@ -1,14 +1,17 @@
-
-@font-face {
-  font-family: 'index';
-  src:  url('fonts/icomoon.eot?r30znd');                     /* IE9 Compat Modes */
-  src:  url('fonts/icomoon.eot?r30znd#iefix') format('embedded-opentype'),  /* IE6-IE8 */
-        url('fonts/icomoon.ttf?r30znd') format('truetype'),      /* Safari, Android, iOS */
-        url('fonts/icomoon.woff?r30znd') format('woff'),          /* Modern Browsers */
-        url('fonts/icomoon.svg?r30znd#icomoon') format('svg');   /* Legacy iOS */
-  font-weight: normal;
-  font-style: normal;
+@path-fonts:'fonts';
+.font-style{
+  @font-face {
+    font-family: 'index';
+    src:  url('@{path-fonts}/icomoon.eot?r30znd');                     /* IE9 Compat Modes */
+    src:  url('@{path-fonts}/icomoon.eot?r30znd#iefix') format('embedded-opentype'),  /* IE6-IE8 */
+    url('@{path-fonts}/icomoon.ttf?r30znd') format('truetype'),      /* Safari, Android, iOS */
+    url('@{path-fonts}/icomoon.woff?r30znd') format('woff'),          /* Modern Browsers */
+    url('@{path-fonts}/icomoon.svg?r30znd#icomoon') format('svg');   /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+  }
 }
+
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */

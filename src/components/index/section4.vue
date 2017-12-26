@@ -30,7 +30,7 @@
 
 <style lang="less" scoped>
   @import '../../assets/fz.less';
-  @import '../../assets/index/style.css';
+  @import '../../assets/index/style.less';
   .section4 {
     width: 100%;
     overflow: hidden;

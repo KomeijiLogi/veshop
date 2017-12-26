@@ -115,7 +115,7 @@
 
 <style lang="less" scoped>
   @import '../../assets/fz.less';
-  @import '../../assets/index/style.css';
+  @import '../../assets/index/style.less';
   .section3 {
     width: 100%;
     .pt();

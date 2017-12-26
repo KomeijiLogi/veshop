@@ -35,7 +35,7 @@
 
 <style lang="less" scoped>
   @import '../../assets/fz.less';
-  @import '../../assets/index/style.css';
+  @import '../../assets/index/style.less';
   .section2-list {
     overflow-x: auto;
     width: 100%;

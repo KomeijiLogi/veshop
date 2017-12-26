@@ -27,7 +27,7 @@
 
 <style lang="less" scoped>
   @import '../../assets/fz.less';
-  @import '../../assets/index/style.css';
+  @import '../../assets/index/style.less';
   .section1 {
     .pt();
     .section1-title {
